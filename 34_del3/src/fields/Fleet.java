@@ -1,13 +1,14 @@
 package fields;
 
+import desktop_resources.GUI;
 import spillere.*;
 
 public class Fleet extends Ownable {
 	// Variable
-	final int LEJE1 = 500;
-	final int LEJE2 = 1000;
-	final int LEJE3 = 2000;
-	final int LEJE4 = 4000;
+	protected final int LEJE1 =  500;
+	protected final int LEJE2 = 1000;
+	protected final int LEJE3 = 2000;
+	protected final int LEJE4 = 4000;
 	
 	// Constructor
 	public Fleet(int pris, Spiller ejer, int leje) {
@@ -30,4 +31,18 @@ public class Fleet extends Ownable {
 		}
 			return 0;
 		}
+	
+	@Override
+	public void koebFelt(Spiller spiller) {
+		if (GUI.getUserLeftButtonPressed("Dette felt har ingen ejer! Oensker du at koebe dette felt for " + getPris() + "?",
+				"Ja",
+				"Nej")) {
+			if (spiller.getBalance() >= getPris()) {
+				setEjer(spiller);
+				spiller.addBalance(-getPris());
+				spiller.addFleet();
+				GUI.showMessage("Du er nu retmaessig ejer af feltet!");
+			}
+		}
+	}
 }

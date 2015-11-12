@@ -12,8 +12,14 @@ public class Spiller {
 		
 	}
 	
-	// Metoder
-	// getter-metoder
+	/*
+	 * METODER
+	 */
+	
+	/*
+	 * Getter-metoder
+	 */
+	
 	public int getLaborCampsEjet() {
 		return laborCampsEjet;
 	}
@@ -22,13 +28,24 @@ public class Spiller {
 		return fleetsEjet;
 	}
 	
-	// setter-metoder
+	/*
+	 * Setter-metoder
+	 */
+	
 	public void setLaborCampsEjet(int n) {
 		this.laborCampsEjet = n;
 	}
 	
 	public void setFleetsEjet(int n) {
 		this.fleetsEjet = n;
+	}
+	
+	public void addLaborCamp() {
+		if (getLaborCampsEjet() < 2) laborCampsEjet += 1;
+	}
+	
+	public void addFleet() {
+		if (getFleetsEjet() < 4) fleetsEjet += 1;
 	}
 	
 	// Kontometoder
