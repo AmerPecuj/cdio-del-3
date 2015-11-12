@@ -6,7 +6,7 @@ public class Tax extends Field {
 	// Constructor
 
 	public Tax() {
-
+		
 	}
 
 	// Metoder

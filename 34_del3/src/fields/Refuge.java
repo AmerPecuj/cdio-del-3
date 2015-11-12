@@ -6,7 +6,6 @@ public class Refuge extends Field {
 	// Constructor
 
 	public Refuge() {
-
 	}
 
 	// Metoder
