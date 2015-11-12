@@ -13,9 +13,11 @@ public abstract class Ownable extends Field {
 	
 	// Metoder
 	// getter-metoder
+	// getPris(); - returnerer feltets pris
 	public int getPris() {
 		return this.pris;
 	}
+	
 	// getLeje(); - abstrakt metode
 	public abstract int getLeje();
 	
@@ -29,6 +31,19 @@ public abstract class Ownable extends Field {
 				spiller.addBalance(-getPris());
 				GUI.showMessage("Du er nu retmaessig ejer af feltet!");
 			}
+		}
+	}
+	
+	// landOnField();
+	// Ens defineret for alle Ownable subtypes - derfor laegges den ind her
+	@Override
+	public void landOnField(Spiller spiller) {
+		if (ejer != null) {
+			if (!spiller.equals(ejer)) {
+				spiller.overfoerPenge(getLeje(), ejer);
+			}
+		} else {
+			koebFelt(spiller);
 		}
 	}
 }
