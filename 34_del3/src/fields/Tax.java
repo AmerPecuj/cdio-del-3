@@ -1,5 +1,7 @@
 package fields;
 
+import spillere.Spiller;
+
 public class Tax extends Field {
 	// Variable
 
@@ -10,5 +12,9 @@ public class Tax extends Field {
 	}
 
 	// Metoder
+	// landOnField();
+	@Override
+	public void landOnField(Spiller spiller) {
 
+	}
 }

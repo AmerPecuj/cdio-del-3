@@ -1,5 +1,7 @@
 package fields;
 
+import spillere.Spiller;
+
 public class Refuge extends Field {
 	// Variable
 
@@ -9,5 +11,9 @@ public class Refuge extends Field {
 	}
 
 	// Metoder
-
+	// landOnField();
+	@Override
+	public void landOnField(Spiller spiller) {
+		
+	}
 }

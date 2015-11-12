@@ -2,23 +2,14 @@ package fields;
 
 import spillere.*;
 
-public class Field {
+public abstract class Field {
 	// Variable
-	Spiller ejer;
 	
 	// Constructor
 	public Field() {
 		
 	}
 	
-	public Field(Spiller ejer) {
-		this.ejer = ejer;
-	}
-	
 	// Metoder
-	public void landOnField(Spiller spiller) {
-		if (spiller.equals(this.ejer)) {
-			
-		}
-	}
+	public abstract void landOnField(Spiller spiller);
 }

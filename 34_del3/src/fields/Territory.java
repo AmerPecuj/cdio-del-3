@@ -8,10 +8,18 @@ public class Territory extends Ownable {
 	
 	// Constructor
 	public Territory(int pris, Spiller ejer, int leje) {
-		super(pris, ejer);
-		super.setLeje(leje);
+		
 	}
 	
-	// Metoder
+	// getLeje();
+	@Override
+	public int getLeje() {
+		return leje;
+	}
 	
+	// landOnField();
+	@Override
+	public void landOnField(Spiller spiller) {
+		
+	}
 }

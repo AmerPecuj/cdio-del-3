@@ -2,34 +2,18 @@ package fields;
 
 import spillere.*;
 
-public class Ownable extends Field {
+public abstract class Ownable extends Field {
 	// Variable
 	int pris;
 	int leje;
+	Spiller ejer;
 	
 	// Constructor
-	public Ownable(int pris, Spiller ejer) {
-		super(ejer);
-		this.pris = pris;
-	}
+	public Ownable() {}
 	
 	// Metoder
+	// getLeje();
 	
-	// Setter-metoder
-	public void setPris(int pris) {
-		this.pris = pris;
-	}
-	
-	public void setLeje(int leje) {
-		this.leje = leje;
-	}
-	
-	// Getter-metoder
-	public int getPris() {
-		return pris;
-	}
-	
-	public int getLeje() {
-		return leje;
-	}
+	// getLeje() - abstract method
+	public abstract int getLeje();
 }

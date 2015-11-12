@@ -8,10 +8,18 @@ public class LaborCamp extends Ownable {
 
 	// Constructor
 	public LaborCamp(int pris, Spiller ejer, int basisLeje) {
-		super(pris, ejer);
-		super.setLeje(basisLeje);
 	}
 
 	// Metoder
-	
+	// getLeje();
+	@Override
+	public int getLeje() {
+		return leje;
+	}
+
+	// landOnField();
+	@Override
+	public void landOnField(Spiller spiller) {
+
+	}
 }
