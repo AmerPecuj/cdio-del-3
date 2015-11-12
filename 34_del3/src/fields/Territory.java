@@ -23,13 +23,13 @@ public class Territory extends Ownable {
 		if (ejer != null) {
 			
 			if (!spiller.equals(ejer)) {
-//				spiller.overfoerPenge(getLeje(), ejer);
+				spiller.overfoerPenge(getLeje(), ejer);
 			}
 			
 		} else {
-			
-//			koebFelt(spiller);
-			
+			koebFelt(spiller);
 		}
 	}
+	
+	
 }
