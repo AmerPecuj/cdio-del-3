@@ -7,8 +7,8 @@ public class Territory extends Ownable {
 	int leje;
 	
 	// Constructor
-	public Territory(int pris, Spiller ejer, int leje) {
-		
+	public Territory(int leje) {
+		this.leje = leje;
 	}
 	
 	// getLeje();
@@ -20,6 +20,16 @@ public class Territory extends Ownable {
 	// landOnField();
 	@Override
 	public void landOnField(Spiller spiller) {
-		
+		if (ejer != null) {
+			
+			if (!spiller.equals(ejer)) {
+//				spiller.overfoerPenge(getLeje(), ejer);
+			}
+			
+		} else {
+			
+//			koebFelt(spiller);
+			
+		}
 	}
 }

@@ -1,6 +1,6 @@
 package fields;
 
-import spillere.Spiller;
+import spillere.*;
 
 public class Fleet extends Ownable {
 	// Variable
@@ -15,10 +15,10 @@ public class Fleet extends Ownable {
 	}
 	
 	// getLeje();
-	@Override
-	public int getLeje() {
-		return leje;
-	}
+//	@Override
+//	public int getLeje() {
+//		
+//	}
 
 	// landOnField();
 	@Override

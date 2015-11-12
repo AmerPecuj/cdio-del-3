@@ -15,6 +15,6 @@ public class Tax extends Field {
 	// landOnField();
 	@Override
 	public void landOnField(Spiller spiller) {
-
+		
 	}
 }
