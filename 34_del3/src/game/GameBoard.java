@@ -1,30 +1,34 @@
 package game;
 
 import java.util.*;
+import fields.*;
 
 public class GameBoard {
 	// Felter
-	String[][] felter =
+	Field[] felter =
 		{
-				{"Tribe Encampment", 		"Territory", 	 "100", 	"1000"},
-				{"Crater",			 		"Territory", 	 "300", 	"1500"},
-				{"Mountain",		 		"Territory", 	 "500", 	"2000"},
-				{"Cold Desert",		 		"Territory", 	 "700", 	"3000"},
-				{"The Werewall",	 		"Territory", 	"1300",		"4300"},
-				{"Black Cave",		 		"Territory", 	"1000",		"4000"},
-				{"Mountain Village", 		"Territory",	"1600",		"4750"},
-				{"South Citadel",	 		"Territory",	"2000",		"5000"},
-				{"Palace Gates",	 		"Territory",	"2600",		"5500"},
-				{"Tower",			 		"Territory",	"3200",		"6000"},
-				{"Castle",			 		"Territory",	"4000",		"8000"},
-				{"Walled City",		 		"Refuge",	   "-5000",			""},
-				{"Monastery",		 		"Refuge",	    "-500",			""},
-				{"Huts in the Mountain",	"Labor Camp",    "100",		"2500"},
-				{"The Pit",					"Labor Camp",	 "100",		"2500"},
-				{"Goldmine",				"Tax",			"2000",			""},
-				{"Caravan",					"Tax",			"4000",			""},
-				{"Second Sail",				"Fleet",		    "",			""}
+				new Territory("Tribe Encampment", 	100, 	1000),
+				new Territory("Crater",			  	300, 	1500),
+				new Territory("Mountain",			500,	2000),
+				new Territory("Cold Desert",		700,	3000),
+				new Territory("The Werewall",	   1300,	4300),
+				new Territory("Black Cave",		   1000,	4000),
+				new Territory("Mountain Village",  1600,	4750),
+				new Territory("South Citadel",	   2000,	5000),
+				new Territory("Palace Gates",	   2600,	5500),
+				new Territory("Tower",			   3200,	6000),
+				new Territory("Castle",			   4000,	8000),
+				new Refuge("Walled City", 					5000),
+				new Refuge("Monastery", 					 500),
+				new LaborCamp("Huts in the Mountain"			),
+				new LaborCamp("The Pit"							),
+				// Denne traekker ogsaa 10% fra efter brugerens eget valg
+				// Husk kravspec
+				new Tax("Goldmine",							2000),
+				new Tax("Caravan",							4000),
+				new Fleet("Second Sail"							),
+				new Fleet("Sea Grover"							),
+				new Fleet("The Buccaneers"						),
+				new Fleet("Privateer Armada")
 		};
-	
-	AbstractList<>
 }

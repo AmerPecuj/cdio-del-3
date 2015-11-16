@@ -9,7 +9,9 @@ public class LaborCamp extends Ownable {
 	protected int basisLeje = 100;
 
 	// Constructor
-	public LaborCamp() {
+	public LaborCamp(String name) {
+		this.name = name;
+		
 		this.pris = 2500;
 	}
 	

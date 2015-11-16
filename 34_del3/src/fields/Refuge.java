@@ -8,7 +8,8 @@ public class Refuge extends Field {
 	
 	// Constructor
 
-	public Refuge(int bonus) {
+	public Refuge(String name, int bonus) {
+		this.name = name;
 		this.bonus = bonus;
 	}
 

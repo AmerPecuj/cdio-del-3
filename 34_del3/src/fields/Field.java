@@ -4,6 +4,7 @@ import spillere.*;
 
 public abstract class Field {
 	// Variable
+	protected String name;
 	
 	// Constructor
 	public Field() {}

@@ -8,9 +8,10 @@ public class Territory extends Ownable {
 	protected int leje;
 	
 	// Constructor
-	public Territory(int pris, int leje) {
-		this.pris = pris;
+	public Territory(String name, int leje, int pris) {
+		this.name = name;
 		this.leje = leje;
+		this.pris = pris;
 	}
 	
 	// getLeje();
