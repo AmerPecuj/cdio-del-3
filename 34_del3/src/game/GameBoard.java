@@ -25,4 +25,6 @@ public class GameBoard {
 				{"Caravan",					"Tax",			"4000",			""},
 				{"Second Sail",				"Fleet",		    "",			""}
 		};
+	
+	
 }
