@@ -2,10 +2,10 @@ package spillere;
 
 public class Spiller {
 	// Variable
-	int balance;
+	protected int balance;
 	
-	int laborCampsEjet;
-	int fleetsEjet;
+	protected int laborCampsEjet;
+	protected int fleetsEjet;
 	
 	// Constructor
 	public Spiller() {

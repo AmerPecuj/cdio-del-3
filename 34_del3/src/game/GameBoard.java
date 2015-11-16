@@ -18,7 +18,7 @@ public class GameBoard {
 				{"Tower",			 		"Territory",	"3200",		"6000"},
 				{"Castle",			 		"Territory",	"4000",		"8000"},
 				{"Walled City",		 		"Refuge",	   "-5000",			""},
-				{"Monastery",		 		"Refuge",	   " -500",			""},
+				{"Monastery",		 		"Refuge",	    "-500",			""},
 				{"Huts in the Mountain",	"Labor Camp",    "100",		"2500"},
 				{"The Pit",					"Labor Camp",	 "100",		"2500"},
 				{"Goldmine",				"Tax",			"2000",			""},
@@ -26,5 +26,5 @@ public class GameBoard {
 				{"Second Sail",				"Fleet",		    "",			""}
 		};
 	
-	
+	AbstractList<>
 }
