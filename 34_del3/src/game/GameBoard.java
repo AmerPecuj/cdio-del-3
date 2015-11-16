@@ -1,11 +1,18 @@
 package game;
 
 import java.util.*;
+
+import desktop_resources.GUI;
 import fields.*;
 
 public class GameBoard {
-	// Felter
-	Field[] felter =
+	// Variable
+
+	/*
+	 * FELTER
+	 * Array indeholdende Felt-objekter
+	 */
+	private Felt[] felter =
 		{
 				new Territory("Tribe Encampment", 	100, 	1000),
 				new Territory("Crater",			  	300, 	1500),
@@ -29,6 +36,14 @@ public class GameBoard {
 				new Fleet("Second Sail"							),
 				new Fleet("Sea Grover"							),
 				new Fleet("The Buccaneers"						),
-				new Fleet("Privateer Armada")
+				new Fleet("Privateer Armada"					)
 		};
+	
+	// Constructor
+	public GameBoard() {}
+	
+	// Metoder
+	public void createGameBoard() {
+		
+	}
 }

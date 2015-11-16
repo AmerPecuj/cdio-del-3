@@ -3,7 +3,7 @@ package fields;
 import spillere.*;
 //import desktop_resources.*;
 
-public abstract class Ownable extends Field {
+public abstract class Ownable extends Felt {
 	// Variable
 	protected int pris;
 	protected Spiller ejer;
@@ -28,24 +28,18 @@ public abstract class Ownable extends Field {
 		return ejer;
 	}
 	
-	// getLeje(); - abstrakt metode
-	public abstract int getLeje();
 	
 	/*
 	 * Setter-metoder
 	 */
+	public void setPris(int pris) {
+		this.pris = pris;
+	}
 	
-	// saet Ejer
 	public void setEjer(Spiller spiller) {
 		this.ejer = spiller;
 	}
 	
-	/*
-	 * Oevrig metodik
-	 */
-	
-	// koebFelt();
-	public abstract void koebFelt(Spiller spiller);
 	
 	/*
 	 * landOnField();
@@ -61,4 +55,14 @@ public abstract class Ownable extends Field {
 			koebFelt(spiller);
 		}
 	}
+	
+	/*
+	 * Abstrakt metodik
+	 */
+	
+	// getLeje()
+	public abstract int getLeje();
+	
+	// koebFelt()
+	public abstract void koebFelt(Spiller spiller);
 }

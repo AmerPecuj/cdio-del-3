@@ -10,11 +10,11 @@ public class Fleet extends Ownable {
 	protected final int LEJE3 = 2000;
 	protected final int LEJE4 = 4000;
 	
-	protected final int PRIS  = 4000;
 	
 	// Constructor
 	public Fleet(String name) {
 		this.name = name;
+		pris = 4000; // Ens for alle fleets
 	}
 	
 	// getLeje();

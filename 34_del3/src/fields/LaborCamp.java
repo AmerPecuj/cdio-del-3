@@ -11,8 +11,7 @@ public class LaborCamp extends Ownable {
 	// Constructor
 	public LaborCamp(String name) {
 		this.name = name;
-		
-		this.pris = 2500;
+		pris = 2500; // Ens for alle labor camps
 	}
 	
 	// Metoder

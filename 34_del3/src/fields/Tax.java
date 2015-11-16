@@ -3,7 +3,7 @@ package fields;
 import desktop_resources.GUI;
 import spillere.Spiller;
 
-public class Tax extends Field {
+public class Tax extends Felt {
 	// Variable
 	protected int basisLeje;
 

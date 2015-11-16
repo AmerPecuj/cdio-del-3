@@ -14,7 +14,8 @@ public class Territory extends Ownable {
 		this.pris = pris;
 	}
 	
-	// getLeje();
+	// Metoder
+	// getter-metoder
 	@Override
 	public int getLeje() {
 		return leje;
