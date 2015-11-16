@@ -9,7 +9,8 @@ public class LaborCamp extends Ownable {
 	protected int basisLeje = 100;
 
 	// Constructor
-	public LaborCamp(int pris, Spiller ejer, int basisLeje) {
+	public LaborCamp() {
+		this.pris = 2500;
 	}
 	
 	// Metoder
@@ -30,7 +31,7 @@ public class LaborCamp extends Ownable {
 			if (spiller.getBalance() >= getPris()) {
 				setEjer(spiller);
 				spiller.addBalance(-getPris());
-				spiller.addLaborCamp();
+				spiller.addLaborCamp(); // Tilfoejer 1 til koeberens LaborCamp-beholdning
 				GUI.showMessage("Du er nu retmaessig ejer af feltet!");
 			}
 		}

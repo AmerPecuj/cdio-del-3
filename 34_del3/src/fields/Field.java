@@ -6,9 +6,7 @@ public abstract class Field {
 	// Variable
 	
 	// Constructor
-	public Field() {
-		
-	}
+	public Field() {}
 	
 	// Metoder
 	public abstract void landOnField(Spiller spiller);

@@ -11,8 +11,8 @@ public class Fleet extends Ownable {
 	protected final int LEJE4 = 4000;
 	
 	// Constructor
-	public Fleet(int pris, Spiller ejer, int leje) {
-		
+	public Fleet() {
+		this.pris = 4000;
 	}
 	
 	// getLeje();
@@ -29,8 +29,8 @@ public class Fleet extends Ownable {
 				return LEJE4;
 			}
 		}
-			return 0;
-		}
+		return 0;
+	}
 	
 	@Override
 	public void koebFelt(Spiller spiller) {
@@ -40,7 +40,7 @@ public class Fleet extends Ownable {
 			if (spiller.getBalance() >= getPris()) {
 				setEjer(spiller);
 				spiller.addBalance(-getPris());
-				spiller.addFleet();
+				spiller.addFleet(); // Tilfoejer 1 til spillerens fleet-beholdning
 				GUI.showMessage("Du er nu retmaessig ejer af feltet!");
 			}
 		}
