@@ -9,7 +9,7 @@ public abstract class Felt {
 	// Constructor
 	public Felt() {}
 	
-	// Metoder
+	// Metoder test
 	// getter-metoder
 	public String getName() {
 		return name;
