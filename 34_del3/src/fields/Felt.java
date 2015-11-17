@@ -20,5 +20,7 @@ public abstract class Felt {
 		this.name = name;
 	}
 	
+	// Abstrakte metoder
+	// landOnField();
 	public abstract void landOnField(Spiller spiller);
 }

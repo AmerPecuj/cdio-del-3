@@ -2,6 +2,7 @@ package game;
 
 import java.util.*;
 
+//import desktop_fields.*;
 import desktop_resources.GUI;
 import fields.*;
 
@@ -44,6 +45,6 @@ public class GameBoard {
 	
 	// Metoder
 	public void createGameBoard() {
-		
+//		Field[] guiFelter = new Field[11];
 	}
 }
