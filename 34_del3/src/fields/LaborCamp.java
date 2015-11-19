@@ -14,7 +14,7 @@ public class LaborCamp extends Ownable {
 		this.name = name;
 		pris = 2500; // Ens for alle labor camps
 	}
-	
+
 	// Metoder
 	// getLeje();
 	@Override
@@ -24,24 +24,24 @@ public class LaborCamp extends Ownable {
 				*getTerningeSum()
 				*ejer.getLaborCampsEjet();
 	}
-	
+
 	public void setTerningeSum(int sum) {
 		terningeSum = sum;
 	}
-	
+
 	public int getTerningeSum() {
 		return terningeSum;
 	}
-	
+
 	@Override
 	public void koebFelt(Spiller spiller) {
-		if (GUI.getUserLeftButtonPressed("Dette felt har ingen ejer! Oensker du at koebe dette felt for " + getPris() + "?",
-				"Ja",
-				"Nej")) {
-			if (spiller.getBalance() >= getPris()) {
+		if(spiller.getBalance()>=getPris()&&ejer==null){
+			if(GUI.getUserLeftButtonPressed("Dette felt har ingen ejer! "
+					+ "Oensker du at koebe dette felt for " 
+					+ getPris() + "?"	, "Ja", "Nej")){
 				setEjer(spiller);
 				spiller.addBalance(-getPris());
-				spiller.addLaborCamp(); // Tilfoejer 1 til koeberens LaborCamp-beholdning
+				spiller.addLaborCamp();
 				GUI.showMessage("Du er nu retmaessig ejer af feltet!");
 			}
 		}
