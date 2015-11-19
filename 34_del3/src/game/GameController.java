@@ -1,20 +1,26 @@
 package game;
 
+import java.util.*;
 import desktop_resources.GUI;
+import fields.*;
+import spillere.*;
 
 public class GameController {
 	// Variable
-	GameBoard board = new GameBoard();
+	GameBoard board;
+	PlayerFactory pf;
+	Spiller[] spillere;
 	
 	// Constructor	
-	public GameController() {}
+	public GameController() {
+		board = new GameBoard();
+		pf = new PlayerFactory();
+	}
 	
 	// Metoder
 	// run();
 	public void run() {
 		board.createBoard();
-		
-		String str = GUI.getUserString("Skriv dit navn");
-		System.out.println(str);
+		spillere = pf.opretSpillere();
 	}
 }

@@ -2,14 +2,15 @@ package spillere;
 
 public class Spiller {
 	// Variable
+	protected String navn;
 	protected int balance;
 	
 	protected int laborCampsEjet;
 	protected int fleetsEjet;
 	
 	// Constructor
-	public Spiller() {
-		
+	public Spiller(String navn) {
+		this.navn = navn;
 	}
 	
 	/*
@@ -28,6 +29,10 @@ public class Spiller {
 		return fleetsEjet;
 	}
 	
+	public String getNavn() {
+		return navn;
+	}
+	
 	/*
 	 * Setter-metoder
 	 */
@@ -38,6 +43,10 @@ public class Spiller {
 	
 	public void setFleetsEjet(int n) {
 		this.fleetsEjet = n;
+	}
+	
+	public void setNavn(String navn) {
+		this.navn = navn;
 	}
 	
 	public void addLaborCamp() {
