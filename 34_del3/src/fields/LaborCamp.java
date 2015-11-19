@@ -36,7 +36,7 @@ public class LaborCamp extends Ownable {
 				"Nej")) {
 			if (spiller.getBalance() >= getPris()) {
 				setEjer(spiller);
-				spiller.addBalance(-getPris());
+				spiller.withdrawBalance(getPris());
 				spiller.addLaborCamp(); // Tilfoejer 1 til koeberens LaborCamp-beholdning
 				GUI.showMessage("Du er nu retmaessig ejer af feltet!");
 			}

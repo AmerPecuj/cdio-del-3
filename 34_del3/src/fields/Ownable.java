@@ -9,7 +9,8 @@ public abstract class Ownable extends Felt {
 	protected Spiller ejer;
 	
 	// Constructor
-	public Ownable() {}
+	public Ownable() {
+	}
 	
 	/*
 	 * METODER
