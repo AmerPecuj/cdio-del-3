@@ -42,24 +42,25 @@ public class GameBoard {
 				new Fleet("Privateer Armada"					)
 		};
 	
+	// createBoard(); - skab brættet
+	public void createBoard() {
+		GUI.create(fieldFactory());
+	}
 	
 	// Metoder
+	// fieldFactory() - private, da den kun bruges internt i klassen
 	private Field[] fieldFactory() {
 		Field[] guiFelter = new Field[felter.length];
 		
 		for (int i = 0; i < guiFelter.length; i++) {
-			
 			guiFelter[i] = new Street.Builder()
 					.setTitle(felter[i].getName())
 					.setSubText(felter[i].getText())
 					.build();
-			
 		}
 		
 		return guiFelter;
 	}
 	
-	public void createBoard() {
-		GUI.create(fieldFactory());
-	}
+	
 }
