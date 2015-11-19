@@ -7,6 +7,7 @@ import game.*;
 public class LaborCamp extends Ownable {
 	// Variable
 	protected int basisLeje = 100;
+	int terningeSum;
 
 	// Constructor
 	public LaborCamp(String name) {
@@ -16,13 +17,15 @@ public class LaborCamp extends Ownable {
 	
 	// Metoder
 	// getLeje();
+	//	setTerningeSum*int()
+	
 	@Override
 	public int getLeje() {
 		
 		// basisLeje*(terningernes sum)*(antal labor camps ejet af ejeren)
 		return basisLeje
-				*Terninger.getSum() //raflebaeger.kastTerninger
-									//raflebaeger.getSum
+				*Terninger.getSum()
+				*terningeSum
 				*ejer.getLaborCampsEjet();
 	}
 	
