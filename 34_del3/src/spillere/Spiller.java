@@ -4,13 +4,14 @@ public class Spiller {
 	// Variable
 	protected String navn;
 	protected int balance;
-	
 	protected int laborCampsEjet;
 	protected int fleetsEjet;
+	protected boolean bankerot = false;
 	
 	// Constructor
 	public Spiller(String navn) {
 		this.navn = navn;
+		this.balance = 30000;
 	}
 	
 	/*
@@ -32,6 +33,10 @@ public class Spiller {
 	public String getNavn() {
 		return navn;
 	}
+
+	public boolean getBankerot() {
+		return bankerot;
+	}
 	
 	/*
 	 * Setter-metoder
@@ -43,6 +48,10 @@ public class Spiller {
 	
 	public void setFleetsEjet(int n) {
 		this.fleetsEjet = n;
+	}
+	
+	public void setBankerot() {
+		this.bankerot = true;
 	}
 	
 	public void setNavn(String navn) {
@@ -91,7 +100,7 @@ public class Spiller {
 			this.withdrawBalance(this.getBalance()); // Den aktive spiller får trukket hele sine kapital
 			modtager.addBalance(this.getBalance()); // Ejeren af feltet modtager resterne
 //			this.resetPortefoelje // Den aktive spillers felter fritstilles
-			// Denne spiller skal deaktiveres - måske bare som en condition i while()?
+			this.setBankerot();
 		}
 	}
 	

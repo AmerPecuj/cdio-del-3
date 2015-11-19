@@ -40,6 +40,8 @@ public class LaborCamp extends Ownable {
 					+ "Oensker du at koebe dette felt for " 
 					+ getPris() + "?"	, "Ja", "Nej")){
 				setEjer(spiller);
+				spiller.withdrawBalance(getPris());
+				spiller.addLaborCamp(); // Tilfoejer 1 til koeberens LaborCamp-beholdning
 				spiller.addBalance(-getPris());
 				spiller.addLaborCamp();
 				GUI.showMessage("Du er nu retmaessig ejer af feltet!");
