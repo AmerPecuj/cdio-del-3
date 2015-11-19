@@ -40,13 +40,10 @@ public class LaborCamp extends Ownable {
 					+ "Oensker du at koebe dette felt for " 
 					+ getPris() + "?"	, "Ja", "Nej")){
 				setEjer(spiller);
-<<<<<<< HEAD
 				spiller.withdrawBalance(getPris());
 				spiller.addLaborCamp(); // Tilfoejer 1 til koeberens LaborCamp-beholdning
-=======
 				spiller.addBalance(-getPris());
 				spiller.addLaborCamp();
->>>>>>> branch 'master' of https://github.com/SebastianFrelle/cdio-del-3
 				GUI.showMessage("Du er nu retmaessig ejer af feltet!");
 			}
 		}
