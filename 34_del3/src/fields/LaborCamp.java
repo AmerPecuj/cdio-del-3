@@ -14,30 +14,39 @@ public class LaborCamp extends Ownable {
 		this.name = name;
 		pris = 2500; // Ens for alle labor camps
 	}
-	
+
 	// Metoder
 	// getLeje();
-	//	setTerningeSum*int()
-	
 	@Override
 	public int getLeje() {
-		
 		// basisLeje*(terningernes sum)*(antal labor camps ejet af ejeren)
 		return basisLeje
-				*Terninger.getSum()
-				*terningeSum
+				*getTerningeSum()
 				*ejer.getLaborCampsEjet();
 	}
-	
+
+	public void setTerningeSum(int sum) {
+		terningeSum = sum;
+	}
+
+	public int getTerningeSum() {
+		return terningeSum;
+	}
+
 	@Override
 	public void koebFelt(Spiller spiller) {
-		if (GUI.getUserLeftButtonPressed("Dette felt har ingen ejer! Oensker du at koebe dette felt for " + getPris() + "?",
-				"Ja",
-				"Nej")) {
-			if (spiller.getBalance() >= getPris()) {
+		if(spiller.getBalance()>=getPris()&&ejer==null){
+			if(GUI.getUserLeftButtonPressed("Dette felt har ingen ejer! "
+					+ "Oensker du at koebe dette felt for " 
+					+ getPris() + "?"	, "Ja", "Nej")){
 				setEjer(spiller);
+<<<<<<< HEAD
 				spiller.withdrawBalance(getPris());
 				spiller.addLaborCamp(); // Tilfoejer 1 til koeberens LaborCamp-beholdning
+=======
+				spiller.addBalance(-getPris());
+				spiller.addLaborCamp();
+>>>>>>> branch 'master' of https://github.com/SebastianFrelle/cdio-del-3
 				GUI.showMessage("Du er nu retmaessig ejer af feltet!");
 			}
 		}
