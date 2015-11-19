@@ -9,25 +9,25 @@ public class Terninger {
 	
 	
 	// KONSTRUKTOER ---------------------------------------------------
-	public Terninger() {
+	protected Terninger() {
 		this.Terning = 0;
 	}
 	// ----------------------------------------------------------------
 
 	// METODER --------------------------------------------------------
-	public void kastTerninger() {
+	protected void kastTerning() {
 		Terning = (int) (Math.random() * MAX) + 1;
 	}
 	// ----------------------------------------------------------------
 	
 	// GETTER-METODER -------------------------------------------------
-	public int getTerning1() {
+	protected int getTerning() {
 		return Terning;
 	}
 	// ----------------------------------------------------------------
 	
 	// SETTER-METODER -------------------------------------------------
-	public void setTerning1(int n) {
+	protected void setTerning(int n) {
 		Terning = n;
 	}
 	// ----------------------------------------------------------------

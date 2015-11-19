@@ -29,9 +29,9 @@ public class Tax extends Felt {
 		if (GUI.getUserLeftButtonPressed("Oensker du at betale " + getBasisLeje() + " eller 10% af din pengebeholdning?",
 				getBasisLeje() + "",
 				"10% af pengebeholdning")) {
-			spiller.addBalance(-getBasisLeje());
+			spiller.withdrawBalance(getBasisLeje());
 		} else {
-			spiller.addBalance(- (int) (spiller.getBalance() / 100 * 10));
+			spiller.withdrawBalance((int) (spiller.getBalance() / 100 * 10));
 		}
 	}
 }

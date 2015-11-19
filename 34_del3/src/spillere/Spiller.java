@@ -61,6 +61,10 @@ public class Spiller {
 		this.balance += beloeb;
 	}
 	
+	public void withdrawBalance (int beloeb) {
+		this.balance -= beloeb;
+	}
+	
 	// Hjaelpemetoder
 	
 	/*
@@ -71,12 +75,23 @@ public class Spiller {
 	
 	public void overfoerPenge(int beloeb, Spiller modtager) {
 		if (beloeb <= this.getBalance()) {
-			this.addBalance(-beloeb);
+			this.withdrawBalance(beloeb);
 			modtager.addBalance(beloeb);
-		} else {
-//			bankerot
+		} 
+		else { // Bankerot
+			this.withdrawBalance(this.getBalance()); // Den aktive spiller får trukket hele sine kapital
+			modtager.addBalance(this.getBalance()); // Ejeren af feltet modtager resterne
+//			this.resetPortefoelje // Den aktive spillers felter fritstilles
+			// Denne spiller skal deaktiveres - måske bare som en condition i while()?
 		}
 	}
+	
+//	public void bankerot() { KAN KUN LAVES HVIS VI LAVER NEDARVNING/OVERRIDE
+//		
+//		this.withdrawBalance(this.getBalance());
+//		modtager.addBalance
+//		
+//	}
 	
 	
 }

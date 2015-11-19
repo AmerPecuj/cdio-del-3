@@ -8,7 +8,7 @@ import fields.*;
 
 public class GameBoard {
 	// Variable
-
+	
 	/*
 	 * FELTER
 	 * Array indeholdende Felt-objekter
@@ -28,7 +28,7 @@ public class GameBoard {
 				new Territory("Castle",			   4000,	8000),
 				new Refuge("Walled City", 					5000),
 				new Refuge("Monastery", 					 500),
-				new LaborCamp("Huts in the Mountain"			),
+				new LaborCamp("Huts in the Mountain"   			),
 				new LaborCamp("The Pit"							),
 				// Denne traekker ogsaa 10% fra efter brugerens eget valg
 				// Husk kravspec

@@ -28,7 +28,7 @@ public class Territory extends Ownable {
 				"Nej")) {
 			if (spiller.getBalance() >= getPris()) {
 				setEjer(spiller);
-				spiller.addBalance(-getPris());
+				spiller.withdrawBalance(getPris());
 				GUI.showMessage("Du er nu retmaessig ejer af feltet!");
 			}
 		}

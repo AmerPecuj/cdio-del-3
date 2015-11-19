@@ -40,6 +40,12 @@ public abstract class Ownable extends Felt {
 		this.ejer = spiller;
 	}
 	
+	public void resetPortefoelje () {
+		
+		// Skal frigøre spillerens passiver
+		
+	}
+	
 	
 	/*
 	 * landOnField();

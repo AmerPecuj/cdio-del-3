@@ -41,7 +41,7 @@ public class Fleet extends Ownable {
 				"Nej")) {
 			if (spiller.getBalance() >= getPris()) {
 				setEjer(spiller);
-				spiller.addBalance(-getPris());
+				spiller.withdrawBalance(getPris());
 				spiller.addFleet(); // Tilfoejer 1 til spillerens fleet-beholdning
 				GUI.showMessage("Du er nu retmaessig ejer af feltet!");
 			}
