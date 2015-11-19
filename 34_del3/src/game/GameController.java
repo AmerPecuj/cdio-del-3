@@ -15,12 +15,14 @@ public class GameController {
 	public GameController() {
 		board = new GameBoard();
 		pf = new PlayerFactory();
+		spillere = pf.opretSpillere();
 	}
 	
 	// Metoder
 	// run();
 	public void run() {
 		board.createBoard();
-		spillere = pf.opretSpillere();
+		//add players
+		
 	}
 }

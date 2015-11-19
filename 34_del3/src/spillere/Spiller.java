@@ -1,12 +1,15 @@
 package spillere;
 
+import java.awt.Color;
+import java.awt.color.*;
+
 public class Spiller {
 	// Variable
 	protected String navn;
 	protected int balance;
 	protected int laborCampsEjet;
 	protected int fleetsEjet;
-	protected boolean bankerot = false;
+	protected boolean bankerot = false; 
 	
 	// Constructor
 	public Spiller(String navn) {

@@ -42,6 +42,11 @@ public class GameBoard {
 				new Fleet("Privateer Armada"					)
 		};
 	
+	// getFelter();
+	public Felt[] getFelter() {
+		return felter;
+	}
+	
 	// createBoard(); - skab brættet
 	public void createBoard() {
 		GUI.create(fieldFactory());
