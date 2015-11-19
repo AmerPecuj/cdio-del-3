@@ -1,22 +1,17 @@
 package game;
 
 import java.awt.Color;
+import desktop_codebehind.Car;
 
 public class CarCreator {
-	private Color[] carColors = {
-			Color.RED,
-			Color.BLACK,
-			Color.BLUE,
-			Color.CYAN,
-			Color.GREEN,
-			Color.YELLOW
-	};
-	
 	public CarCreator() {
 		
 	}
 	
-	public void getCar() {
-		
+	public Car getCar(Color farve) {
+		return new Car.Builder()
+				.primaryColor(farve)
+				.typeTractor()
+				.build();
 	}
 }

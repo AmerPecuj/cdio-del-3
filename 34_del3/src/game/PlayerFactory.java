@@ -1,12 +1,14 @@
 package game;
 
+import java.awt.Color;
 import java.util.ArrayList;
 
 import desktop_resources.GUI;
 import spillere.*;
 
 public class PlayerFactory {
-
+	// variable
+	
 	/**
 	 * opretSpillere()
 	 * @return spillere Array af spillerobjekter

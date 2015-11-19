@@ -9,6 +9,8 @@ public class GameController {
 	// Variable
 	GameBoard board;
 	PlayerFactory pf;
+	CarCreator cf;
+	
 	Spiller[] spillere;
 	
 	// Constructor	
@@ -16,13 +18,13 @@ public class GameController {
 		board = new GameBoard();
 		pf = new PlayerFactory();
 		spillere = pf.opretSpillere();
+		cf = new CarCreator();
 	}
 	
 	// Metoder
 	// run();
 	public void run() {
 		board.createBoard();
-		//add players
 		
 	}
 }

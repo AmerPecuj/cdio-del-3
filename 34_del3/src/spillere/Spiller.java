@@ -9,7 +9,7 @@ public class Spiller {
 	protected int balance;
 	protected int laborCampsEjet;
 	protected int fleetsEjet;
-	protected boolean bankerot = false; 
+	protected boolean bankerot = false;
 	
 	// Constructor
 	public Spiller(String navn) {
