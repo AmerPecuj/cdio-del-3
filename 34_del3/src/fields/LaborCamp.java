@@ -17,16 +17,20 @@ public class LaborCamp extends Ownable {
 	
 	// Metoder
 	// getLeje();
-	//	setTerningeSum*int()
-	
 	@Override
 	public int getLeje() {
-		
 		// basisLeje*(terningernes sum)*(antal labor camps ejet af ejeren)
 		return basisLeje
-				*Terninger.getSum()
-				*terningeSum
+				*getTerningeSum()
 				*ejer.getLaborCampsEjet();
+	}
+	
+	public void setTerningeSum(int sum) {
+		terningeSum = sum;
+	}
+	
+	public int getTerningeSum() {
+		return terningeSum;
 	}
 	
 	@Override

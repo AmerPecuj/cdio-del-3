@@ -21,6 +21,14 @@ public class Refuge extends Felt {
 		return bonus;
 	}
 	
+	/**
+	 * getText();
+	 */
+	@Override
+	public String getText() {
+		return "Gevinst: " + getBonus();
+	}
+	
 	// setter-metoder
 	/**
 	 * @param bonus the bonus to set

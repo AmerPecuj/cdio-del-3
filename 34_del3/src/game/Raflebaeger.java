@@ -15,9 +15,7 @@ public class Raflebaeger {
 	}
 
 	public int getSum() {
-		
 		int slag = Terning1.getTerning() + Terning2.getTerning();
-		
 		return slag;
 	}
 	

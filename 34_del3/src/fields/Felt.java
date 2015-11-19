@@ -5,6 +5,7 @@ import spillere.*;
 public abstract class Felt {
 	// Variable
 	protected String name;
+	protected String text;
 	
 	// Constructor
 	public Felt() {}
@@ -23,4 +24,7 @@ public abstract class Felt {
 	// Abstrakte metoder
 	// landOnField();
 	public abstract void landOnField(Spiller spiller);
+	
+	// getText();
+	public abstract String getText();
 }

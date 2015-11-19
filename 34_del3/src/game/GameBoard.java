@@ -2,7 +2,8 @@ package game;
 
 import java.util.*;
 
-//import desktop_fields.*;
+import desktop_fields.Field;
+import desktop_fields.Street;
 import desktop_resources.GUI;
 import fields.*;
 
@@ -44,7 +45,14 @@ public class GameBoard {
 	public GameBoard() {}
 	
 	// Metoder
-	public void createGameBoard() {
-//		Field[] guiFelter = new Field[11];
+	public void fieldFactory() {
+		Field[] guiFelter = new Field[felter.length];
+		
+		for (int i = 0; i < guiFelter.length; i++) {
+			guiFelter[i] = new Street.Builder()
+					.setTitle(felter[i].getName())
+					.setSubText(felter[i].getText())
+					.build();
+		}
 	}
 }

@@ -3,32 +3,32 @@ package game;
 public class Terninger {
 	
 	// VARIABLE -------------------------------------------------------
-	private int Terning = 0;
+	private int terning = 0;
 	private final int MAX = 6;
 	// ----------------------------------------------------------------
 	
 	
 	// KONSTRUKTOER ---------------------------------------------------
 	protected Terninger() {
-		this.Terning = 0;
+		this.terning = 0;
 	}
 	// ----------------------------------------------------------------
 
 	// METODER --------------------------------------------------------
 	protected void kastTerning() {
-		Terning = (int) (Math.random() * MAX) + 1;
+		terning = (int) (Math.random() * MAX) + 1;
 	}
 	// ----------------------------------------------------------------
 	
 	// GETTER-METODER -------------------------------------------------
 	protected int getTerning() {
-		return Terning;
+		return terning;
 	}
 	// ----------------------------------------------------------------
 	
 	// SETTER-METODER -------------------------------------------------
 	protected void setTerning(int n) {
-		Terning = n;
+		terning = n;
 	}
 	// ----------------------------------------------------------------
 }

@@ -62,6 +62,15 @@ public abstract class Ownable extends Felt {
 		}
 	}
 	
+	/**
+	 * getText();
+	 * @return text den subtext, der skal stå på feltet
+	 */
+	@Override
+	public String getText() {
+		return "Pris: " + getPris();
+	}
+	
 	/*
 	 * Abstrakt metodik
 	 */

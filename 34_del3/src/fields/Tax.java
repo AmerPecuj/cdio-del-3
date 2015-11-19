@@ -23,6 +23,11 @@ public class Tax extends Felt {
 		return basisLeje;
 	}
 	
+	// getText();
+	@Override
+	public String getText() {
+		return "Straf: " + getBasisLeje() + " eller 10%";
+	}
 	// landOnField();
 	@Override
 	public void landOnField(Spiller spiller) {
