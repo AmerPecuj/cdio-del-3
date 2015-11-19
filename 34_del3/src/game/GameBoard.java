@@ -9,6 +9,7 @@ import fields.*;
 
 public class GameBoard {
 	// Variable
+	Field[] guiFelter;
 	
 	/*
 	 * FELTER
@@ -41,18 +42,24 @@ public class GameBoard {
 				new Fleet("Privateer Armada"					)
 		};
 	
-	// Constructor
-	public GameBoard() {}
 	
 	// Metoder
-	public void fieldFactory() {
+	private Field[] fieldFactory() {
 		Field[] guiFelter = new Field[felter.length];
 		
 		for (int i = 0; i < guiFelter.length; i++) {
+			
 			guiFelter[i] = new Street.Builder()
 					.setTitle(felter[i].getName())
 					.setSubText(felter[i].getText())
 					.build();
+			
 		}
+		
+		return guiFelter;
+	}
+	
+	public void createBoard() {
+		GUI.create(fieldFactory());
 	}
 }
